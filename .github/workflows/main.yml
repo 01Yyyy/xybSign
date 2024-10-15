@@ -11,10 +11,10 @@ on:
     #         │ │ │ ┌──── month (1 - 12 or JAN-DEC)
     #         │ │ │ │ ┌── day of the week (0 - 6 or SUN-SAT)
     #         │ │ │ │ │
-    - cron: '0 1 * * *'
+    - cron: '30 30 9 * * *'
  
 jobs:
-  run-check-in: # 任务名
+  run-check-in: # 签到
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -30,4 +30,4 @@ jobs:
 
       - name: 运行签到
         run: |
-          node ./index.js '${{ secrets.XYB }}'
+          node ./index1.js '${{ secrets.XYB }}'
